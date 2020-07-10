@@ -1,43 +1,59 @@
 header {
-
-
+	display: flex;
+	flex-direction: row;
 }
 
-
 h2 {
-
+	border: 2px solid black;
+	padding: 1px 3px 1px 3px;
+	margin: 3px 1px 3px 1px;
+	text-align: center;
+	width: 33%;
 }
 
 .nav {
-
-
-  }
-
-  li {
-
-
-  }
-
-  .content{
-
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }
 
-  .aside {
-
+  li {
+		text-align: center;
+		border: 1px solid black;
+		padding: 1px 3px 1px 3px;
+		margin: 3px 3px 3px 3px;
+		width: 20%;
   }
 
-  .slidebox{
+.content{
+	border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+}
 
-   
-  }
+.aside {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	min-width: 30%;
+}
 
-  .article{
+.slidebox{
+	text-align: center;
+	border: 1px solid black;
+}
 
-  }
+.article{
+	border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+}
 
 
 .poem{
-
+	border: 1px solid black;
 }
 
 
@@ -45,10 +61,10 @@ h2 {
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
     .article {
-
+			flex-direction: column;
   } 
 header{
-
+	visibility: hidden;
 }
 }
 
@@ -56,17 +72,18 @@ header{
 @media (max-width:599px) {
 
 header,.content{
-
+	visibility: hidden;
 }
 
 .nav {
-
-
-  }
+	flex-direction: column;
+	margin-right: 50px;
+}
 
 
 .nav > li {
-
+	width: 100%;
+	margin-bottom: 70px;
 }
 
 

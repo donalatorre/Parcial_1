@@ -28,7 +28,15 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 
 // CREA TU FUNCION challenge1 aqui:
 
-
+function challenge1() {
+	var numero = parseInt(prompt("Cuantos botones necesita"));
+	var dummy = document.getElementById("dummy");
+	for(var i = 0; i < numero; i++) {
+			var newButton = document.createElement("BUTTON");
+			newButton.innerHTML = nombres[i];
+			dummy.appendChild(newButton);
+	}
+}
 
 /*
 Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los nombres a mayusula y los escriba en la consola
@@ -36,7 +44,11 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 
 // CREA TU FUNCION challenge2 2 aquí.
 
-
+function challenge2() {
+	nombres.forEach(nombre =>
+		console.log(nombre.toUpperCase())
+	);
+}
 
 /*
 
@@ -46,12 +58,26 @@ A) Define un objeto tipo "Dog" que reciba 3 parametros
 2) Color
 3) Raza
 
+*/
 
+function Dog(nombre, color, raza) {
+	this.nombre = nombre;
+	this.color = color;
+	this.raza = raza;
+}
+
+/*
 B) Crea 3 objectos siguiendo esa clase con diferentes valores
 
 eJ   var fido = new Dog("Fido","Cafe","Poodle")
 
+*/
 
+var firu = new Dog("Firu", "Blanco", "Chihuahua");
+var puchi = new Dog("Puchi", "Negro", "Dobberman");
+var kami = new Dog("Kami", "Cafe", "Pastor Aleman");
+
+/*
 *****BONUS**** 10  puntos
 
 Crea una método llamado printInfo()  que escriba en consola todas las propiedades del objeto que lo invoca. 
@@ -69,8 +95,15 @@ Deberia escribir en consola
 
 // CREA TU FUNCION printInfo() AQUI
 
+Dog.prototype.printInfo = function () {
+	console.log("Nombre: " + this.nombre + " , De color: " + this.color + " , Raza: " + this.raza);
+}
 
-
+function challenge3() {
+	firu.printInfo();
+	puchi.printInfo();
+	kami.printInfo();
+}
 
 </script>
 
